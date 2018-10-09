@@ -42,7 +42,17 @@ class Main
          * Task 2.  Create a new array called ar2.
          *          Copy the elements of ar1 into ar2.
          */
+        System.out.println("** ar2 **");
+        int[] ar2 = new int[ar1.length];
         
+        // This clones ar1[] into ar2[]
+        // int[] ar2 = ar1.clone();
+        for(int i=0; i<ar2.length; i++)
+            ar2[i]=ar1[i];
+        
+        for(int i=0; i<ar2.length; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
+        //                      ar2[  i  ] =   i
         
         /* 
          * Task 3. Add 1 to each element in ar1.  Print it out below
