@@ -121,6 +121,23 @@ class Main
          *          the indices are multiples of 3
          *         
          */
+        System.out.println("** Task 6A **");
+        for (int i=1; i<n-1; i++)
+            System.out.println("ar1["+i+"] = "+ar1[i]);
+        
+        System.out.println("** Task 6B **");
+        for (int i=0; i<n; i++){
+            if (ar1[i]%2 != 0){
+                System.out.println("ar1["+i+"] = "+ar1[i]);
+            }
+        }
+        
+        System.out.println("** Task 6C **");
+        for (int i=0; i<n; i++){
+            if (ar1[i]%3 == 0){
+                System.out.println("ar1["+i+"] = "+ar1[i]);
+            }
+        }
         
         /*
          * Task 7.  For each element in ar1, 
