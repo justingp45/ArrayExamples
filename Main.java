@@ -151,6 +151,15 @@ class Main
          *          ar[3]=4
          */
         
+        System.out.println("** Task 7 **");
+        for (int i = 0; i<n; i++){
+            if (ar1[i]%2==1){
+                ar1[i] = (ar1[i]*10);
+            }
+            System.out.println("ar1["+i+"] = "+ar1[i]);
+        }
+                
+        
          /*
           * Task 8
           *    Create an array called ar2odds
