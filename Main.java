@@ -175,7 +175,7 @@ class Main
         int[] ar2odds = new int[ar2.length]; // too big right now.
         for ( int i=0 ; i<ar2.length ; i++)
         {
-            System.out.println(ar2[i]); // Just print it out to see
+            System.out.println("ar2["+i+"] = "+ar2[i]); // Just print it out to see
                
                if (i%2==1)
             {
@@ -185,23 +185,43 @@ class Main
         }
            
         for (int i=0 ; i<k ; i++)
-            System.out.println(ar2odds[i]);    
-         
+            System.out.println("ar2odds["+i+"] = "+ar2odds[i]);    
+
          
         /*
-         * Task 9. In the array ar2, count how many odd numbers you
-         * have.  Then create an ew array called ar4.  Copy just the odd
-         * numbers from ar1 into ar4.  Print ar4
+         * Task 9. In the ar2, count how many odd numbers you
+         * have.  Then create a new array called ar4.  Copy just the odd
+         * numbers from ar2 into ar4.  Print ar4
          */
         
+        System.out.println(" ** Task 9 **");
+        int oddsamt = 0;
+        for (int i=0; i<ar2.length ; i++){
+            if (ar2[i]%2==1){
+                oddsamt += 1;
+            }
+        }
+        int[] ar4 = new int[oddsamt];
+        int t = 0;
+        for (int i=0; i<ar2.length ; i++){
+            if (ar2[i]%2==1){
+                ar4[t] = ar2[i];
+                t++;
+            }
+        }
+        for (int i=0 ; i<ar4.length ; i++)
+            System.out.println("ar4["+i+"] = "+ar4[i]); 
+                
         /*
          * Task 10.  Shift the elements of ar4 right by 1
          * For example
          * old   ar4: 1 3 5 7 9
          * new   ar4  9 1 3 5 7
          */
-        
-        
+       
+   
+
+      
         /*
          * Task 11.  Reverse the order of elements in ar2
          */
