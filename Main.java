@@ -209,15 +209,37 @@ class Main
                 t++;
             }
         }
-        for (int i=0 ; i<ar4.length ; i++)
+        for (int i=0 ; i<ar4.length ; i++){
             System.out.println("ar4["+i+"] = "+ar4[i]); 
-                
-        /*
-         * Task 10.  Shift the elements of ar4 right by 1
-         * For example
-         * old   ar4: 1 3 5 7 9
-         * new   ar4  9 1 3 5 7
-         */
+        }
+      
+      /*
+       * Task 10. Shift the elements of ar4 right by 1
+       * For example
+       * old   ar4: 1 3 5 7 9
+       * new   ar4: 9 1 3 5 7
+       */
+     
+        
+       
+       System.out.println(" ** Task 10 ** ");
+       
+       System.out.println("old ar4");
+       for (int i = 0 ; i<ar4.length; i++){
+          System.out.println("ar4["+i+"] = "+ar4[i]);
+        }
+       int tempar4 = ar4[ar4.length-1];
+       for (int i=ar4.length-1 ; i>0 ; i--){
+            ar4[i]=ar4[i-1];
+        }
+        
+        ar4[0] = tempar4;
+        System.out.println("new ar4");
+        for (int i = 0 ; i<ar4.length; i++){
+            System.out.println("ar4["+i+"] = "+ar4[i]);
+        }
+   
+   
        
    
 
