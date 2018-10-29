@@ -357,8 +357,8 @@ class Main
          * a vowel
          */
         
-         /*
-          * Task 14
+        /*
+         *Task 14
           * Create an array of integers from 3 to 94 and call it arx
           * Create an array of the indices of arx when the item is
           * divisible by 3.  Call this arindex
@@ -371,9 +371,50 @@ class Main
           *      
           *      So arindex[0]=2
           *         arindex[1]=5
-          */
+        */
+          
+             System.out.println("** Task 14 **");
+ 
+             // Set Start parameters. I do not use 3 and 94 directly in program to avoid
+             // having "magic" numbers. So if I want to change 3 or 94, I change it in one
+             // place and the program is fine.
+             int start = 3;
+             int end = 94;
+             int n14=end - start+1;
+             
+             // This array will hold the number from "start" to "end"
+             int[] arx = new int[n14];
+            
+             // This counts how many numbers are divisible by 3 so I can make a smaller array
+            
+            int count14index=0;
+            
+             // put the numbers into arx[] and also count how many are divisible by 3
+             for (int i=0 ; i<n14 ; i++)
+            {
+                arx[i]=start+i;
+                if (arx[i]%3==0)
+                    count14index++;
+            }
+            // Make an array of exactly the right size.
+            
+            int[] arxindex = new int[count14index];
+            int k14=0;
+            for (int i=0 ; i<n14 ; i++)
+            {
+                if (arx[i]%3==0)
+                { 
+                    arxindex[k14]=i;
+                    k14++;
+                }
+            }
+            
+            //Print out the array 
+            for (int i=0 ; i<count14index; i++)
+                System.out.println(arxindex[i]);
          
          /*
+          * Task 15
           * Create an arrary called "fb" and calculate the
           * first 10 fibonacci sequence.  You start with
           * fb[0]=1
@@ -383,5 +424,15 @@ class Main
           * fb[4]=fb[2]+fb[3]
           */
         
+         System.out.println("** Task 15 **");
+         int []fb = new int[10];
+         fb[0] = 1;
+         fb[1] = 1;
+         for (int i = 0; i<8; i++){
+             fb[i+2] = fb[i]+fb[i+1];
+            }
+         for (int i = 0; i<fb.length; i++){
+             System.out.println("fb["+i+"] = "+fb[i]);
+            }
     }
 }
